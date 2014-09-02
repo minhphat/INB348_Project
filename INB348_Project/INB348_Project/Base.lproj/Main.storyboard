@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="B7E-do-pdB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Drawer Controller-->
+        <scene sceneID="j5K-id-6GU">
+            <objects>
+                <viewController id="B7E-do-pdB" customClass="MMDrawerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pIT-3P-ROT"/>
+                        <viewControllerLayoutGuide type="bottom" id="DcQ-sl-nSC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4BI-Pb-5Ec">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="dYc-IT-jx6" kind="custom" identifier="mm_left" customClass="MMDrawerControllerSegue" id="XC4-54-9Vi"/>
+                        <segue destination="mVS-Vo-VtM" kind="custom" identifier="mm_center" customClass="MMDrawerControllerSegue" id="zCH-di-jkt"/>
+                        <segue destination="H4e-fu-suw" kind="custom" identifier="mm_right" customClass="MMDrawerControllerSegue" id="pIk-Gy-as3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWl-GP-VKq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HeS-ux-4zy">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="mVS-Vo-VtM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RBd-Mk-K9r">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DCo-YF-Qte" kind="relationship" relationship="rootViewController" id="Sqa-oB-1Pe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6X5-dE-aYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="138"/>
+        </scene>
+        <!--Example Center Table View Controller-->
+        <scene sceneID="ykP-1U-efL">
+            <objects>
+                <viewController id="DCo-YF-Qte" customClass="MMExampleCenterTableViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="647-9L-Fb8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7w-wU-j9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082" y="138"/>
+        </scene>
+        <!--Example Left Side Drawer View Controller-->
+        <scene sceneID="31W-yM-igi">
+            <objects>
+                <viewController id="dYc-IT-jx6" customClass="MMExampleLeftSideDrawerViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSp-4W-WAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="-535"/>
+        </scene>
+        <!--Example Right Side Drawer View Controller-->
+        <scene sceneID="kuu-em-bun">
+            <objects>
+                <viewController id="H4e-fu-suw" customClass="MMExampleRightSideDrawerViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7HU-dI-LqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="845"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
